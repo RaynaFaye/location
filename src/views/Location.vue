@@ -5,6 +5,7 @@
       <div class="location-section">
         <h2>1. Appréciation Générale</h2>
         <div class="pie-and-table">
+          <div class="waiting-load" v-if="!loaded"></div>
           <app-pie-charts
             :dataSet="dataSetOne"
             :dataSetPercentage="dataSetOnePercentage"
@@ -36,6 +37,7 @@
       <div class="location-section">
         <h2>2. Location du véhicule</h2>
         <div class="pie-and-table">
+          <div class="waiting-load" v-if="!loaded"></div>
           <app-pie-charts
             :dataSet="dataSetTwo"
             :dataSetPercentage="dataSetTwoPercentage"
@@ -53,6 +55,7 @@
       <div class="location-section">
         <h2>3. Le Véhicule</h2>
         <div class="pie-and-table">
+          <div class="waiting-load" v-if="!loaded"></div>
           <app-pie-charts
             :dataSet="dataSetThree"
             :dataSetPercentage="dataSetThreePercentage"
@@ -70,6 +73,7 @@
       <div class="location-section">
         <h2>4. Restitution du Véhicule</h2>
         <div class="pie-and-table">
+          <div class="waiting-load" v-if="!loaded"></div>
           <app-pie-charts
             :dataSet="dataSetFour"
             :dataSetPercentage="dataSetFourPercentage"
@@ -445,6 +449,12 @@ h2 {
   background: orange;
   border-radius: 5px;
   padding: 10px;
+}
+.waiting-load {
+  width: 500px;
+  height: 500px;
+  border: 1px solid orange;
+  border-radius: 5px;
 }
 .canvasSize {
   width: 500px;
