@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Location Leclerc</h1>
+    <h1>Location de Vehicule Leclerc</h1>
     <section class="location">
       <div class="location-section">
         <h2>1. Appréciation Générale</h2>
@@ -166,7 +166,8 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost/locationquestionnaire/fetchdata.php")
+      .get("https://locationleclerc.serenalombardo.fr/fetchdata.php")
+      //.get("http://localhost/locationquestionnaire/fetchdata.php")
       .then(response => {
         for (let i = 0; i < response.data.length; i++) {
           this.optionChoice(response.data[i].globalSatisfaction);
@@ -440,8 +441,15 @@ export default {
 h1 {
   text-align: center;
 }
+h2 {
+  background: orange;
+  border-radius: 5px;
+  padding: 10px;
+}
 .canvasSize {
   width: 500px;
+  border: 1px solid orange;
+  border-radius: 5px;
 }
 .location {
   display: flex;
@@ -452,9 +460,11 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-h2 {
-  background: orange;
-  padding: 10px;
+.pie-and-table {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .recommendation-section {
   margin-top: 50px;
@@ -465,14 +475,17 @@ h2 {
 .recommendation-score-text {
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 .arrow {
+  border-radius: 5px;
   margin-top: 50px;
   height: 50px;
   background: linear-gradient(to right, #ff0000, #daa600, #43ff00);
   position: relative;
 }
 .arrow-end {
+  border-radius: 5px;
   height: 100px;
   width: 50px;
   position: absolute;
@@ -485,6 +498,7 @@ h2 {
 .score {
   font-weight: bold;
   border: 1px solid black;
+  border-radius: 5px;
   background: linear-gradient(to right, #51da02, #43ff00);
   padding: 10px;
   position: absolute;
@@ -499,12 +513,6 @@ h2 {
 }
 .ten {
   right: -10px;
-}
-.pie-and-table {
-  margin-top: 25px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 @media all and (max-width: 992px) {
   .location-section {

@@ -50,9 +50,6 @@
         </tr>
       </tfoot>
     </table>
-    <!-- <p>Points Reçus: {{ calculScoreGenerale() }}</p>
-    <p>Points Max: {{ totalPoints() }}</p>
-    <p>Pourcentage: {{ percentage() }}%</p>-->
   </div>
 </template>
 
@@ -88,17 +85,17 @@ export default {
 </script>
 
 <style>
+table {
+  margin-top: 25px;
+  border-collapse: collapse;
+}
 thead {
   background: #ffb732;
 }
 td,
 th {
-  border: 1px solid black;
+  border: 1px solid orange;
   padding: 10px;
-}
-table {
-  margin-top: 25px;
-  border-collapse: collapse;
 }
 tfoot {
   color: #c90000;
