@@ -1,29 +1,20 @@
-# dashboard
+# Dashboard
 
-## Project setup
+## General Project
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
+This folder holds a general setup for vue.js with the vue router vuex and axios.
+Ready to deploy a dashboard that will interpretate data received by a questionnaire.
 ```
 
-### Compiles and minifies for production
+### To add onto it
 ```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
+There is yet no signup or login pages and the code to do that
 ```
 
-### Lints and fixes files
+### General Structure
 ```
-npm run lint
+The main page currently in the location.vue that holds all the code.
+This allows to show pie charts and tables of the data received from the questionnaire.
+Here currently the page is seeking data from a php file.
+php files exist, but haven't been uploaded to the different projects
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
